@@ -8,6 +8,8 @@ Steps for launching ROS-Gazebo platfrom with hyq
 > - Load controller interface `roslaunch xpp_hyq_simple hyq_ctrlr.launch` 
 > - ~~Load a simple controller `roslaunch xpp_hyq_simple hyq_inv_contr.launch`~~ <-- this line is not needed  
 
+New results video: 
+> - Jumping quadruped - https://youtu.be/HqfPNuIz6WE 
 
 --- 
 
