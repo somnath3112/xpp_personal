@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <node name="inv_contr" pkg="xpp_hyq_simple" type="inv_contr.py" output="screen"/>
+</launch>

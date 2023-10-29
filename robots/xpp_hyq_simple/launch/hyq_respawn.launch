@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+ <!--Launch a robot-->
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot_description)/urdf/my_robot.xacro'"/> 
+ <!--  <param name="robot_description" command="$(find xacro)/xacro.py '$(find xpp_hyq_simple)/urdf/monoped.urdf'"/>-->
+
+<node name="bot_0" pkg="gazebo_ros" type="spawn_model" output="screen"
+  args="-urdf -param robot_description -model my_robot -x -3.5 -y -6.8 -z 0.2 -Y 0.6981  -namespace my_robot" />
+
+</launch>

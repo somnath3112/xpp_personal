@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<!-- trunk macro definition -->
+	<xacro:macro name="hyq_trunk" params="name">
+	
+		<!-- Floating-base Joint -->
+		<joint name="floating_base" type="fixed">
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<parent link="${name}"/>
+			<child link="trunk"/>
+		</joint>
+
+		<!-- Footprint link -->
+		<link name="${name}">
+			<visual>
+				<geometry>
+					<cylinder length="0.01" radius="0.01"/>
+				</geometry>
+			</visual>
+		</link>
+  		<gazebo reference="${name}">
+    		<mu1>10</mu1>
+		    <mu2>10</mu2>
+
+    		<kp>1000.0</kp>
+    		<kd>1000.0</kd>
+    		<!--minDepth>0.001</minDepth-->
+		    <!--maxVel>1.0</maxVel-->
+
+		    <material>Gazebo/Chrome</material>
+  		</gazebo>
+		
+		<!-- Trunk link -->
+		<link name="trunk">
+			<visual>
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+				<geometry>
+					<mesh filename="package://xpp_hyq_simple/meshes/trunk/trunk.dae" scale="1 1 1"/>
+				</geometry>
+			</visual>
+			<collision>
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+				<geometry>
+					<mesh filename="package://xpp_hyq_simple/meshes/trunk/trunk.dae" scale="1 1 1"/>
+				</geometry>
+			</collision>
+			<inertial> 
+				<origin xyz="0 0 0" rpy="0 0 0"/>
+            	<mass value="8"/> 
+            	<inertia 
+            	    ixx="0.17713" 
+	                ixy="0" 
+                	ixz="0" 
+	                iyy="0.6883" 
+                	iyz="0" 
+                	izz="0.8222"/>
+			</inertial>
+		</link>
+  		<gazebo reference="trunk">
+    		<mu1>10</mu1>
+		    <mu2>10</mu2>
+
+    		<kp>1000.0</kp>
+    		<kd>1000.0</kd>
+    		<!--minDepth>0.001</minDepth-->
+		    <!--maxVel>1.0</maxVel-->
+
+		    <material>Gazebo/Chrome</material>
+  		</gazebo>
+
+	</xacro:macro>
+
+</robot>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<!-- Delete if the robot exists --> 
+ <node pkg="rosservice" type="rosservice" name="delr" args="call --wait /gazebo/delete_model hyq"/>
+
+ <!--Launch a robot-->
+ <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find xpp_hyq_simple)/urdf/hyq.urdf.xacro'"/> 
+ <!--  <param name="robot_description" command="$(find xacro)/xacro.py '$(find xpp_hyq_simple)/urdf/monoped.urdf'"/>-->
+
+<node name="bot_0" pkg="gazebo_ros" type="spawn_model" output="screen"
+  args="-urdf -param robot_description -model hyq -x -0 -y 0 -z 1.0 -Y 0.6981  -namespace hyq" />
+
+</launch>
