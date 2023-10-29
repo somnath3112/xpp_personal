@@ -1,3 +1,16 @@
+## [New] Loading the ROS-Gazebo platfrom with hyq   
+
+File location: robots>xpp_simple 
+
+Steps for launching ROS-Gazebo platfrom with hyq (see <a id=qpedrosback>[source](#qpedros)</a>)
+> Load the world only `roslaunch xpp_hyq_simple world_only.launch` 
+> Load qudruped in the world `roslaunch xpp_hyq_simple hyq_in_world.launch`
+> Load controller interface `roslaunch xpp_hyq_simple hyq_ctrlr.launch` 
+> ~~Load a simple controller `roslaunch xpp_hyq_simple hyq_inv_contr.launch`~~ <-- this line is not needed  
+
+
+--- 
+
 ### <img src="https://i.imgur.com/ct8e7T4.png" width="20%" /> 
 
 [![Build Status](http://build.ros.org/buildStatus/icon?job=Kdev__xpp__ubuntu_xenial_amd64)](http://build.ros.org/view/Kdev/job/Kdev__xpp__ubuntu_xenial_amd64/)
