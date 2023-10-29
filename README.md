@@ -2,10 +2,10 @@
 
 File location: robots>xpp_simple 
 
-Steps for launching ROS-Gazebo platfrom with hyq (see <a id=qpedrosback>[source](#qpedros)</a>)
-> Load the world only `roslaunch xpp_hyq_simple world_only.launch` 
-> Load qudruped in the world `roslaunch xpp_hyq_simple hyq_in_world.launch`
-> Load controller interface `roslaunch xpp_hyq_simple hyq_ctrlr.launch` 
+Steps for launching ROS-Gazebo platfrom with hyq 
+> - Load the world only `roslaunch xpp_hyq_simple world_only.launch` 
+> - Load qudruped in the world `roslaunch xpp_hyq_simple hyq_in_world.launch`
+> - Load controller interface `roslaunch xpp_hyq_simple hyq_ctrlr.launch` 
 > ~~Load a simple controller `roslaunch xpp_hyq_simple hyq_inv_contr.launch`~~ <-- this line is not needed  
 
 
